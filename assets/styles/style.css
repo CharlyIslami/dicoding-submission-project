@@ -251,6 +251,36 @@ footer {
     transform: translateY(-3px);
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #e8e9ed;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -3px);
+}
+
 @media (max-width: 600px) {
     header { 
         flex-direction: column;
@@ -265,6 +295,18 @@ footer {
 
     .navbar {
         width: 100%;
+        display: none; 
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 16px;
+        top: 20px;
     }
 
     .navbar ul {
@@ -284,6 +326,7 @@ footer {
     .info {
         align-self: flex-end;
         font-size: 0.95rem;
+        display: none;
     }
 
     main {
