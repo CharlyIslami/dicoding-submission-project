@@ -312,6 +312,11 @@ footer {
     border: none;
     cursor: pointer;
     z-index: 1001;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .hamburger span {
